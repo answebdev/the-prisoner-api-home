@@ -1,4 +1,4 @@
-# The Twilight Zone API
+# The Prisoner API
 
 ![Screenshot 01](screenshots/banner.png "The Twilight Zone API")
 
