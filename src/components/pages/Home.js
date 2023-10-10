@@ -109,7 +109,7 @@ const Home = ({ history }) => {
                         </div>
                         <div>
                             <p>
-                                Welcome to the Twilight Zone API. This documentation should
+                                Welcome to the Prisoner API. This documentation should
                                 provide you with all the information you need to start making
                                 your HTTP requests. This API is free. Feel free to use it in
                                 your projects.
@@ -154,11 +154,6 @@ const Home = ({ history }) => {
                                         <td>Episode title</td>
                                     </tr>
                                     <tr>
-                                        <td>season</td>
-                                        <td>string</td>
-                                        <td>Season number</td>
-                                    </tr>
-                                    <tr>
                                         <td>episode</td>
                                         <td>string</td>
                                         <td>Episode number</td>
@@ -166,12 +161,12 @@ const Home = ({ history }) => {
                                     <tr>
                                         <td>directed_by</td>
                                         <td>string</td>
-                                        <td>Episode director(s)</td>
+                                        <td>Episode director</td>
                                     </tr>
                                     <tr>
                                         <td>written_by</td>
-                                        <td>string</td>
-                                        <td>Episode writer</td>
+                                        <td>array</td>
+                                        <td>Episode writer(s)</td>
                                     </tr>
                                     <tr>
                                         <td>air_year</td>
@@ -184,24 +179,29 @@ const Home = ({ history }) => {
                                         <td>Original air date</td>
                                     </tr>
                                     <tr>
-                                        <td>storyline</td>
+                                        <td>wikipedia_storyline</td>
                                         <td>string</td>
-                                        <td>Brief overview of episode</td>
+                                        <td>Brief overview of episode from Wikipedia</td>
+                                    </tr>
+                                    <tr>
+                                        <td>imdb_storyline</td>
+                                        <td>string</td>
+                                        <td>Brief overview of episode from IMDb</td>
                                     </tr>
                                     <tr>
                                         <td>cast</td>
+                                        <td>string</td>
+                                        <td>Episode actor</td>
+                                    </tr>
+                                    <tr>
+                                        <td>guest_appearances</td>
                                         <td>array</td>
-                                        <td>Episode actor(s)</td>
+                                        <td>Episode guest actor(s)</td>
                                     </tr>
                                     <tr>
-                                        <td>opening_narration</td>
+                                        <td>title_img</td>
                                         <td>string</td>
-                                        <td>Narration at opening of episode</td>
-                                    </tr>
-                                    <tr>
-                                        <td>closing_narration</td>
-                                        <td>string</td>
-                                        <td>Narration at closing of episode</td>
+                                        <td>Title image from episode</td>
                                     </tr>
                                     <tr>
                                         <td>img</td>
@@ -217,6 +217,11 @@ const Home = ({ history }) => {
                                         <td>imdb</td>
                                         <td>string</td>
                                         <td>Link to episode IMDb page</td>
+                                    </tr>
+                                    <tr>
+                                        <td>trivia</td>
+                                        <td>string</td>
+                                        <td>Trivia from episode</td>
                                     </tr>
                                 </table>
                             </div>
@@ -235,7 +240,7 @@ const Home = ({ history }) => {
                             <p>
                                 <pre>
                                     <code className='language-javascript'>
-                                        {`fetch('https://the-twilight-zone-api.vercel.app/episodes')
+                                        {`fetch('https://the-prisoner-api.vercel.app/episodes')
   .then(response => response.json())
   .then(json => console.log(json))
 `}
@@ -252,7 +257,7 @@ const Home = ({ history }) => {
                             <p>
                                 <pre>
                                     <code className='language-javascript'>
-                                        {`fetch('https://the-twilight-zone-api.vercel.app/episodes/1')
+                                        {`fetch('https://the-prisoner-api.vercel.app/episodes/1')
   .then(response => response.json())
   .then(json => console.log(json))
 `}
@@ -267,108 +272,35 @@ const Home = ({ history }) => {
                                     <code className='language-javascript'>
                                         {`{
     "id": 1,
-    "title": "Where Is Everybody?",
-    "season": "1",
+    "title": "Arrival",
     "episode": "1",
-    "directed_by": "Robert Stevens",
-    "written_by": "Rod Serling",
-    "air_year": "1959",
-    "air_date": "10-02-1959",
-    "storyline": "Mike Ferris finds himself alone in the small Oakwood town and without recollection about his name, where he is or who he is. Mike wanders through the town trying to find a living soul. The tension increases and Mike has a breakdown.",
-    "cast": [
-        "Earl Holliman",
-        "James Gregory",
-        "Garry Walberg"
+    "directed_by": "Don Chaffey",
+    "written_by": [
+      "George Markstein",
+      "David Tomblin"
     ],
-    "opening_narration": "The place is here. The time is now, and the journey into the shadows that we are about to watch, could be our journey.",
-    "closing_narration": "The barrier of loneliness: The palpable, desperate need of the human animal to be with his fellow man. Up there, up there in the vastness of space, in the void that is sky, up there is an enemy known as isolation. It sits there in the stars waiting, waiting with the patience of eons, forever waiting... in The Twilight Zone.",
-    "img": "https://i.postimg.cc/DycfzqTJ/where-is-everybody.png",
-    "wikipedia": "https://en.wikipedia.org/wiki/Where_Is_Everybody%3F",
-    "imdb": "https://www.imdb.com/title/tt0734692/"
+    "air_year": "1967",
+    "air_date": "09-29-1967",
+    "wikipedia_storyline": "After waking up in the Village and discovering his captivity there, Number Six encounters a friend from the outside who may have a possible escape.",
+    "imdb_storyline": "After resigning, a secret agent finds himself trapped in a bizarre prison known only as The Village.",
+    "cast": "Patrick McGoohan",
+    "guest_appearances": [
+      "Guy Doleman",
+      "George Baker",
+      "Virginia Maskell",
+      "Paul Eddington"
+    ],
+    "title_img": "https://i.postimg.cc/6544t2SP/01-arrival-title.png",
+    "img": "https://i.postimg.cc/9050f1sN/01-arrival.png",
+    "wikipedia": "https://en.wikipedia.org/wiki/Arrival_(The_Prisoner)",
+    "imdb": "https://www.imdb.com/title/tt0679174/",
+    "trivia": "No 6 gives his birthdate and time as 4.31 am, 19th March, 1928 - which is exactly the same as Patrick McGoohan's."
 }
 `}
                                     </code>
                                 </pre>
                             </p>
-                            <br />
 
-                            <h2 className={classes.Subheading}>Get all episodes by season</h2>
-                            <p>
-                                Endpoint to retrieve information from all episodes by season. To
-                                indicate the season, add the season number (1-5) at the end.
-                            </p>
-                            <p>
-                                <pre>
-                                    <code className='language-javascript'>{`/season1`}</code>
-                                </pre>
-                            </p>
-                            <br />
-
-                            <p>
-                                The request for all of the episodes from season 1 looks like
-                                this.
-                            </p>
-                            <p>
-                                <pre>
-                                    <code className='language-javascript'>
-                                        {`fetch('https://the-twilight-zone-api.vercel.app/season1')
-  .then(response => response.json())
-  .then(json => console.log(json))
-`}
-                                    </code>
-                                </pre>
-                            </p>
-                            <br />
-
-                            <h2 className={classes.Subheading}>
-                                Get a single episode of a particular season
-                            </h2>
-                            <p>
-                                Example request by episode id from a particular season. In this
-                                example, episode with an id of 39 from season 2 is being
-                                requested.
-                            </p>
-                            <p>
-                                <pre>
-                                    <code className='language-javascript'>
-                                        {`fetch('https://the-twilight-zone-api.vercel.app/season2/39')
-  .then(response => response.json())
-  .then(json => console.log(json))
-`}
-                                    </code>
-                                </pre>
-                            </p>
-                            <br />
-
-                            <p>Running this script will return the following data.</p>
-                            <p>
-                                <pre>
-                                    <code className='language-javascript'>
-                                        {`{
-    "id": 39,
-    "title": "Nervous Man in a Four Dollar Room",
-    "season": "2",
-    "episode": "3",
-    "directed_by": "Douglas Heyes",
-    "written_by": "Rod Serling",
-    "air_year": "1960",
-    "air_date": "10-14-1960",
-    "storyline": "Small time criminal Jackie Rhoades must face both his past and his conscience while waiting for his next assignment.",
-    "cast": [
-        "Joe Mantell",
-        "William D. Gordon"
-    ],
-    "opening_narration": "This is Mr. Jackie Rhoades, age thirty-four, and where some men leave a mark of their lives as a record of their fragmentary existence on Earth, this man leaves a blot, a dirty, discolored blemish to document a cheap and undistinguished sojourn amongst his betters. What you're about to watch in this room is a strange mortal combat between a man and himself, for in just a moment, Mr. Jackie Rhoades, whose life has been given over to fighting adversaries, will find his most formidable opponent in a cheap hotel room that is in reality the outskirts of The Twilight Zone.",
-    "closing_narration": "Exit Mr. John Rhoades, formerly a reflection in a mirror, a fragment of someone else's conscience, a wishful thinker made out of glass, but now made out of flesh, and on his way to join the company of men. Mr. John Rhoades, with one foot through the door and one foot out of the Twilight Zone.",
-    "img": "https://i.postimg.cc/vZpzZWWb/nervous-man-in-a-four-dollar-room.png",
-    "wikipedia": "https://en.wikipedia.org/wiki/Nervous_Man_in_a_Four_Dollar_Room",
-    "imdb": "https://www.imdb.com/title/tt0734596/"
-}
-`}
-                                    </code>
-                                    <div id='resources2'></div>
-                                </pre>
-                            </p>
                         </div>
                     </div>
                     <div id='resources'></div>
