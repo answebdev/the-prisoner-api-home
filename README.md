@@ -1,6 +1,6 @@
 # The Prisoner API
 
-![Screenshot 01](screenshots/banner.png "The Twilight Zone API")
+![Screenshot 01](screenshots/banner.png "The Prisoner")
 
 ## Description
 
