@@ -47,13 +47,11 @@ const About = () => {
 
                         <h2 className={classes.Subheading}>About the API</h2>
                         <p>
-                            The Twilight Zone API is a collection of information based on the
-                            original Twilight Zone television series, seasons 1-5 (1959-1964).
-                            I love The Twilight Zone, and I was unable to find a Twilight Zone
+                            The Prisoner API is a collection of information based on the Prisoner television series (1967-1968).
+                            I love The Prisoner, and I was unable to find a Prisoner
                             API with the information that I wanted, so I decided to create my
                             own. I designed this site in the hopes of making it easy for
-                            developers to see what information is available and to see what
-                            HTTP requests are possible. The full documentation can be found in
+                            developers to see what information is available for this API. The full documentation can be found in
                             the documentation section of the Home page.
                         </p>
                         <br />
@@ -61,8 +59,8 @@ const About = () => {
                         <h2 className={classes.Subheading}>Copyright</h2>
                         <p>
                             I do not own the rights to any of the information or images
-                            provided in this API. The Twilight Zone was created by Rod Serling
-                            and first aired on October 2, 1959. The data and images collected
+                            provided in this API. The Prisoner was created by Patrick McGoohan, with possible contributions from George Markstein,
+                            and had its British premiere on September 29, 1967. The data collected
                             for this API came from{' '}
                             <a
                                 className={classes.Link}
@@ -81,27 +79,17 @@ const About = () => {
                             >
                                 IMDb
                             </a>
-                            ,{' '}
-                            <a
-                                className={classes.Link}
-                                href='https://twilightzone.fandom.com/wiki/A_Fifth_Dimension:The_Twilight_Zone_Wiki'
-                                rel='noopener noreferrer'
-                                target='_blank'
-                            >
-                                The Twilight Zone Wiki
-                            </a>
                             , and{' '}
                             <a
                                 className={classes.Link}
-                                href='https://midnitereviews.com/'
+                                href='https://prisoner.fandom.com/wiki/The_Prisoner_(1967_series)'
                                 rel='noopener noreferrer'
                                 target='_blank'
                             >
-                                Midnite Reviews
-                            </a>
-                            . In some cases, some of the images were re-sized in order to be
-                            consistent with the image size across the collection. In these
-                            instances, the images were re-hosted with new URLs.
+                                The Prisoner Wiki
+                            </a>.
+                            The images come from screenshots taken from the episodes, and were re-sized in order to be
+                            consistent with the image size across the collection. The images were then hosted in order to create their URLs.
                         </p>
                         <br />
 
