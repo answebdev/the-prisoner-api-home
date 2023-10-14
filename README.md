@@ -14,13 +14,6 @@ Please check out the live link for The Prisoner API documentation site here: [Th
 
 Please go to the API documentation here: [The Prisoner API Documentation](https://github.com/answebdev/the-prisoner-api "The Prisoner API Documentation")
 
-## Table of Contents
-* [Technologies Used](#Technologies-Used)
-* [Development](#Development)
-  - [API Development](#API-Development)
-  - [Site Development](#Site-Development)
-* [Screenshots](#Screenshots)
-
 ## Technologies Used
 
 * React
@@ -39,40 +32,6 @@ Please go to the API documentation here: [The Prisoner API Documentation](https:
 * Vercel (for API)
 
 [Back To Top](#Table-of-Contents)
-
-## Development
-
-The Prisoner API was developed in two phases: API Development and Site Development. In the API Development phase, the actual Prisoner API was built, deployed, and tested. In the Site Development phase, the React site was created for the documentation of the API. Details of each phase are described below.
-
-### API Development
-
-To build the [API](https://github.com/answebdev/the-prisoner-api "The Prisoner API Documentation"), an Express server was built to serve the data and then deploy the data endpoints using Vercel. In order to create different endpoints for the API (a different endpoint was created for each season and one for all the episodes), I created separate `.js` files for each of the endpoints and their respective data (i.e., `episodes.js` contained the data for all of the episodes, `season1.js` contained all of the data for Season 1, etc.) and put them in a folder called `endpoints`. I then created separate routes for each of the endpoints, including dynamic routing in the cases of getting data by a particular `id`, for example (see example code below). These were then brought in and used in the server file (`index.js`). In addition, a `base.html` page with the `/` endpoint was created for the base URL page containing the API's resources. A route was also created for this in the `routes` folder, and was also brought in to use in the server file (`index.js`).
-
-```
-const router = require('express').Router();
-const episodes = require('../endpoints/episodes');
-
-// Get all episodes
-router.get('/', async (req, res) => {
-  try {
-    res.json(episodes);
-  } catch (error) {
-    console.log(error);
-    return res.status(500).send('Server error');
-  }
-});
-
-// Get by episode id
-router.get(`/:id`, (req, res) => {
-  let items = episodes;
-  let data = items.find((item) => item.id == req.params.id);
-  res.json(data);
-});
-
-module.exports = router;
-```
-
-In addition, Express Rate Limit was used to set a rate limit of 10,000 requests. The rate limiting was tested using Postman, including using the Postman test runner to test the status of each request made and setting the iteration to 10,001, one request over the limit, which at that point returned a status of 429, indicating that the rate limiting was working as expected. To test the endpoints, I used Postman and Paw Cloud, and also created a simple site in order to test each of the endpoints by first fetching, and then displaying the data from the API in the browser:
 
 ![Screenshot 07](screenshots/test-site.gif "Test Site")
 
