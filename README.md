@@ -12,7 +12,7 @@ Please check out the live link for The Prisoner API documentation site here: [Th
 
 ## API Link
 
-Please go to the API documentation here: [The Twilight Zone API Documentation](https://github.com/answebdev/twilight-zone-api/ "The Twilight Zone API Documentation")
+Please go to the API documentation here: [The Prisoner API Documentation](https://github.com/answebdev/the-prisoner-api "The Prisoner API Documentation")
 
 ## Table of Contents
 * [Technologies Used](#Technologies-Used)
