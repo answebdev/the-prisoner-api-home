@@ -31,8 +31,6 @@ Please go to the API documentation here: [The Prisoner API Documentation](https:
 * Postman (for API)
 * Vercel (for API)
 
-[Back To Top](#Table-of-Contents)
-
 ## Test Site
 
 The following site was created for testing purposes in order to test the API endpoint: [The Prisoner API Test Site](https://the-prisoner-api-js-test.vercel.app/ "The Prisoner API Test Site")
@@ -48,5 +46,3 @@ The following site was created for testing purposes in order to test the API end
 ![Screenshot 03](screenshots/prisoner-screenshot03.png "Error Page")
 
 <img src="screenshots/prisoner-screenshot04.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
-
-[Back To Top](#Table-of-Contents)
