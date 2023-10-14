@@ -74,7 +74,7 @@ const Home = ({ history }) => {
                     <div className={classes.Content}>
                         <h1 className={classes.MainTitleText}>The Prisoner API</h1>
                         <p className={classes.LeadText}>
-                            Make HTTP requests on the Prisoner television series (1967-1968).
+                            Make HTTP requests on The Prisoner television series (1967-1968).
                         </p>
                         <br />
                         <br />
