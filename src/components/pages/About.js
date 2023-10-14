@@ -17,7 +17,7 @@ const About = () => {
     return (
         <div className={classes.PageContainer}>
             <Helmet>
-                <title>The Twilight Zone API | About</title>
+                <title>The Prisoner API | About</title>
             </Helmet>
 
             <Navbar />
