@@ -47,6 +47,6 @@ The following site was created for testing purposes in order to test the API end
 
 ![Screenshot 03](screenshots/prisoner-screenshot03.png "Error Page")
 
-<img src="screenshots/twilightzone-screenshot04.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
+<img src="screenshots/prisoner-screenshot04.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
 
 [Back To Top](#Table-of-Contents)
