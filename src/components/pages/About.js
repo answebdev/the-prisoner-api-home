@@ -87,6 +87,13 @@ const About = () => {
                                 target='_blank'
                             >
                                 The Prisoner Wiki
+                            </a>. The image logo came from <a
+                                className={classes.Link}
+                                href='https://en.wikipedia.org/'
+                                rel='noopener noreferrer'
+                                target='_blank'
+                            >
+                                Wikipedia
                             </a>.
                             The images come from screenshots taken from the episodes, and were re-sized in order to be
                             consistent with the image size across the collection. The images were then hosted in order to create their URLs.
