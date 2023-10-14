@@ -45,7 +45,7 @@ The following site was created for testing purposes in order to test the API end
 
 ![Screenshot 02](screenshots/prisoner-screenshot02.png "Home Page Documentation Section")
 
-![Screenshot 03](screenshots/twilightzone-screenshot04.png "Error Page")
+![Screenshot 03](screenshots/twilightzone-screenshot03.png "Error Page")
 
 <img src="screenshots/twilightzone-screenshot05.png" title="Preview of Link when Shared on Facebook" width="50%" height="auto">
 
