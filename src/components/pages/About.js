@@ -47,7 +47,7 @@ const About = () => {
 
                         <h2 className={classes.Subheading}>About the API</h2>
                         <p>
-                            The Prisoner API is a collection of information based on the Prisoner television series (1967-1968).
+                            The Prisoner API is a collection of information based on The Prisoner television series (1967-1968).
                             I love The Prisoner, and I was unable to find a Prisoner
                             API with the information that I wanted, so I decided to create my
                             own. I designed this site in the hopes of making it easy for
