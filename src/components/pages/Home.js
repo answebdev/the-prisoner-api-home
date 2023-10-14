@@ -4,44 +4,12 @@ import Navbar from '../../layout/Navbar';
 import Footer from '../../layout/Footer';
 import classes from '../../styles/Home.module.css';
 import useWindowDimensions from '../../utils/useWindowDimensions';
-// import handleHashUrl from '../../utils/handleHashUrl';
 import smoothscroll from 'smoothscroll-polyfill';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-twilight.css';
 
-const Home = ({ history }) => {
+const Home = () => {
     const { width } = useWindowDimensions();
-
-    // useEffect(() => {
-    //     handleHashUrl();
-    //     window.history.replaceState(
-    //         '',
-    //         document.title,
-    //         window.location.origin + window.location.pathname + window.location.search
-    //     );
-
-    //     window.scroll({ top: 0, left: 0, behavior: 'smooth' });
-    //     window.scrollTo(0, 0);
-
-    //     const hash = history.location.hash;
-    //     if (hash && document.getElementById(hash.substr(1))) {
-    //         // Check if there is a hash and if an element with that id exists
-    //         document
-    //             .getElementById(hash.substr(1))
-    //             .scrollIntoView({ behavior: 'smooth' });
-    //     }
-    // });
-
-    // Source: https://stackoverflow.com/questions/54080391/remove-hash-from-url-without-refreshing
-    // function removehash() {
-    //     setTimeout(function () {
-    //         history.replaceState("", document.title, window.location.pathname);
-    //     }, 1);
-    // }
-
-    // useEffect(() => {
-    //     handleHashUrl();
-    // });
 
     useEffect(() => {
         Prism.highlightAll();
@@ -50,16 +18,7 @@ const Home = ({ history }) => {
         window.scroll({ top: 0, left: 0, behavior: 'smooth' });
         // Scroll to top of page:
         window.scrollTo(0, 0);
-
-        // Code to fix bug in Firefox and Safari (hash links not working):
-        // const hash = history.location.hash;
-        // if (hash && document.getElementById(hash.substr(1))) {
-        //     // Check if there is a hash and if an element with that id exists
-        //     document
-        //         .getElementById(hash.substr(1))
-        //         .scrollIntoView({ behavior: 'smooth' });
-        // }
-    }, []); // Fires when component mounts and every time hash changes
+    }, []);
 
     return (
         <div className={classes.PageContainer}>
@@ -80,7 +39,6 @@ const Home = ({ history }) => {
                         <br />
                         <div className={classes.Buttons}>
                             <a
-                                // onClick={handleHashUrl()}
                                 href={width < 768 ? '#docs2' : '#docs'}
                                 className={`${classes.GetStarted} ${'hashed'}`}
                             >
@@ -88,7 +46,6 @@ const Home = ({ history }) => {
                             </a>
                             <p></p>
                             <a
-                                // onClick={handleHashUrl()}
                                 href={width < 768 ? '#resources2' : '#resources'}
                                 className={`${classes.GetStarted} ${'hashed'}`}
                             >

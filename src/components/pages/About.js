@@ -111,6 +111,22 @@ const About = () => {
                             &nbsp;to let me know. I will gladly correct any error or address
                             any issue as soon as I can.
                         </p>
+                        <br />
+
+                        <h2 className={classes.Subheading}>Other API</h2>
+                        <p>
+                            I also created&nbsp;
+                            <a
+                                className={classes.Link}
+                                href='https://thetwilightzoneapi.netlify.app/'
+                                rel='noopener noreferrer'
+                                target='_blank'
+                            >
+                                The Twilight Zone API
+                            </a>, where you can make HTTP requests on the original Twilight Zone
+                            television series, seasons 1-5 (1959-1964). Feel free to check it out
+                            and use it as well.
+                        </p>
                     </div>
                 </section>
             </div>
