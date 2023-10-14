@@ -24,27 +24,25 @@ Please go to the API documentation here: [The Prisoner API Documentation](https:
 ## Technologies Used
 
 * React
-* The Twilight Zone custom-built API
+* The Prisoner custom-built API
 * Prism
 * CSS (CSS Modules)
 * Flexbox
 * React Helmet
 * Smoothscroll Polyfill
-* Responsively App
 * Facebook Developer Tools (Sharing Debugger)
 * Netlify
 * Express (for API)
 * Cors (for API)
 * Express Rate Limit (for API)
 * Postman (for API)
-* Paw Cloud (for API)
 * Vercel (for API)
 
 [Back To Top](#Table-of-Contents)
 
 ## Development
 
-The Twilight Zone API was developed in two phases: API Development and Site Development. In the API Development phase, the actual Twilight Zone API was built, deployed, and tested. In the Site Development phase, the React site was created for the documentation of the API. Details of each phase are described below.
+The Prisoner API was developed in two phases: API Development and Site Development. In the API Development phase, the actual Prisoner API was built, deployed, and tested. In the Site Development phase, the React site was created for the documentation of the API. Details of each phase are described below.
 
 ### API Development
 
