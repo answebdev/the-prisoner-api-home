@@ -44,13 +44,13 @@ const Home = () => {
                             >
                                 Get Started
                             </a>
-                            <p></p>
+                            {/* <p></p>
                             <a
                                 href={width < 768 ? '#resources2' : '#resources'}
                                 className={`${classes.GetStarted} ${'hashed'}`}
                             >
                                 Resources
-                            </a>
+                            </a> */}
                         </div>
                         <div id='docs2'></div>
                     </div>
