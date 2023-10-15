@@ -95,7 +95,7 @@ const About = () => {
                             >
                                 Wikipedia
                             </a>.
-                            The images come from screenshots taken from the episodes, and were re-sized in order to be
+                            The images came from screenshots taken from the episodes, and were re-sized in order to be
                             consistent with the image size across the collection. The images were then hosted in order to create their URLs.
                         </p>
                         <br />
